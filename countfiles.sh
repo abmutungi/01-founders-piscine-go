@@ -1,1 +1,1 @@
-find -type f | find -type d | wc -l
+find -type fd | wc -l
