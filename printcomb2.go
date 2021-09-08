@@ -3,22 +3,29 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintComb2() {
-	for a := '0'; a <= '8'; a++ {
-		for b := '0'; b <= '8'; b++ {
-			if a < b {
-				z01.PrintRune(a)
-				z01.PrintRune(b)
-				z01.PrintRune(32)
-				z01.PrintRune(a)
-				for c := '0'; c <= '8'; c++ {
-					z01.PrintRune(c)
-				}
-				if a == '9' && b == '9' {
-					z01.PrintRune(10)
-				} else {
-					z01.PrintRune(32)
-				}
+	for a := '0'; a <= '9'; a++ {
+		for b := '0'; b <= '9'; b++ {
+			for c := '0'; c <= '9'; c++ {
+				for d := '0'; d <= '9'; d++ {
+					if a < b {
+						if b < c {
+							if c < d {
+								z01.PrintRune(a)
+								z01.PrintRune(b)
+								z01.PrintRune(44)
+								z01.PrintRune(c)
+								z01.PrintRune(d)
 
+								if a == '9' && b == '9' && c == '9' && d == '9' {
+									z01.PrintRune(10)
+								} else {
+									z01.PrintRune(44)
+									z01.PrintRune(32)
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
