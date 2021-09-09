@@ -1,7 +1,9 @@
 package piscine
 
-func PringStr(s string){
+import "github.com/01-edu/z01"
 
-	s := Hello World!%
-	
+func PrintStr(s string) {
+	for _, word := range s {
+		z01.PrintRune(word)
+	}
 }
