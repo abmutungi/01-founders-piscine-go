@@ -6,19 +6,5 @@ import (
 )
 
 func main() {
-	arg := 4
-	fmt.Println(piscine.RecursiveFactorial(arg))
+	fmt.Println(piscine.IterativePower(4, 3))
 }
-
-/*package main
-
-import (
-	"fmt"
-	"piscine"
-)
-
-func main() {
-	arg := 23
-	fmt.Println(piscine.IterativeFactorial(arg))
-}
-*/
