@@ -8,7 +8,7 @@ func Index(s string, toFind string) int {
 		return -1
 	}
 	for i := 0; i < len(place); i++ {
-		if len(place[i:]) < len([]rune(toFind)) {
+		if len(place[i:]) < find {
 			return -1
 		} else {
 			if s[i:i+find] == toFind {
