@@ -1,11 +1,10 @@
 package piscine
 
 func LastRune(s string) rune {
-	runeArray := []rune(s)
-	arrayCount := 0
+	var arrayCount rune
 
-	for i := range s {
-		arrayCount = i + 1
+	for _, i := range s {
+		arrayCount = i
 	}
-	return rune(arrayCount - 1)
+	return arrayCount
 }
