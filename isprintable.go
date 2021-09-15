@@ -1,9 +1,8 @@
 package piscine
 
-func IsUpper(s string) bool {
-
+func IsPrintable(s string) bool {
 	for _, i := range s {
-		if i < 'A' || i > 'Z' {
+		if i >= 0 && i <= 31 || i >= 127 {
 			return false
 		}
 	}
