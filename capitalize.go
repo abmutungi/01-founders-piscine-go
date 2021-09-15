@@ -13,7 +13,7 @@ func Capitalize(s string) string {
 		if j == 0 { // capitalising the first character if its a lowercase letter
 			if char[j] >= 97 && char[j] <= 122 {
 				char[j] = char[j] - 32
-			}
+			} // all the conditions for capitalising if its preceded by a character
 		} else if char[j-1] >= 97 && char[j-1] <= 122 || char[j-1] >= 65 && char[j-1] <= 90 || char[j-1] >= 48 && char[j-1] <= 57 {
 		} else if char[j] >= 97 && char[j] <= 122 || char[j] >= 65 && char[j] <= 90 {
 			char[j] = char[j] - 32
