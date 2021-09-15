@@ -4,11 +4,9 @@ func IsUpper(s string) bool {
 	rstr := []rune(s)
 
 	for _, i := range rstr {
-		if (i >= 'A') && (i <= 'Z') {
-			return true
-		}
-		if (i >= 'a') && (i <= 'z') {
+		if i < 'A' || i > 'Z' {
 			return false
 		}
 	}
+	return true
 }
