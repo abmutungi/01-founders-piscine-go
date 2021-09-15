@@ -26,5 +26,4 @@ func PrintNbrInOrder(n int) {
 			}
 		}
 	}
-
 }
