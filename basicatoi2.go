@@ -9,6 +9,9 @@ func BasicAtoi2(s string) int {
 			trim = trim * 10
 			trim = trim + int(str[i]-48)
 		}
+		if (str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z') {
+			return 0
+		}
 		if str[i] == ' ' {
 			return 0
 		}
