@@ -1,12 +1,12 @@
 package piscine
 
 func StrRev(s string) string {
-	conv := []rune(s)
+	slice := []rune(s) // turn string into a rune
 
-	var arr []rune
+	var empty []rune // create an empty rune
 
-	for i := len(conv) - 1; i > -1; i-- {
-		arr = append(arr, conv[i])
+	for i := len(slice) - 1; i >= 0; i-- { // initialising from end of the string; the condition i >= 0 ; work backwards
+		empty = append(empty, slice[i])
 	}
-	return string(arr)
+	return string(empty) // print reverse
 }
