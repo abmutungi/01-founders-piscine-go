@@ -3,13 +3,10 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintNbrInOrder(n int) {
-
 	arr := [10]int{}
 
 	if n >= 0 && n <= 9 {
-
 		z01.PrintRune(rune(n + 48))
-
 	} else {
 		for {
 			if n == 0 {
