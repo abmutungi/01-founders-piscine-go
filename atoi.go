@@ -1,27 +1,21 @@
 package piscine
 
 func Atoi(s string) int {
-	str := []rune(s)
-	neg := str[0] == '-'
-	if neg || str[0] == '+' {
-		str = str[1:]
-	}
-	trim := 0
-	for {
-		if str[0] >= '0' && str[0] <= '9' {
-			trim *= 10
-			trim += int(str[0] - 48)
+	num := 0    // initalise num as 0
+	result := 1 // initialise result as 1
+
+	for i, val := range s { // uses for range loop to iterate over s
+		digit := int(val) - 48
+		if digit <= 9 && digit >= 0 {
+			num = num*10 + digit
+		} else if digit == -3 && i == 0 {
+			result = -1
+		} else if digit == -5 && i == 0 {
+			result = 1
 		} else {
 			return 0
 		}
-		if len(str) > 1 {
-			str = str[1:]
-		} else {
-			break
-		}
 	}
-	if neg {
-		trim *= -1
-	}
-	return trim
+	num *= result
+	return num
 }
