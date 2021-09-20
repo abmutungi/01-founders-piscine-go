@@ -2,7 +2,12 @@ package main
 
 import "fmt"
 
-func setPoint(ptr *point int) {
+type point struct {
+	x int
+	y int
+}
+
+func setPoint(ptr *point) {
 	ptr.x = 42
 	ptr.y = 21
 }
