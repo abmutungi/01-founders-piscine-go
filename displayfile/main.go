@@ -14,7 +14,7 @@ func main() {
 
 	if len(os.Args) == 1 {
 
-		file, err := os.Open("quest8.txt")
+		file, err := os.Open(os.Args[0])
 		if err != nil {
 			fmt.Println(err)
 		}
@@ -24,5 +24,7 @@ func main() {
 		file.Read(arr)
 		fmt.Println(string(arr))
 		file.Close()
+	} else {
+		fmt.Println("Too many arguments")
 	}
 }
