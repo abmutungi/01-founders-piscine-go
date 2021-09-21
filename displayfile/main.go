@@ -6,17 +6,18 @@ import (
 )
 
 func main() {
-	if len(os.Args) > 1 {
+	if len(os.Args) < 1 {
 		os.Args = os.Args[1:]
 	} else {
 		fmt.Println("File name missing")
+		return
 	}
 
 	if len(os.Args) == 1 {
 
-		file, err := os.Open(os.Args[0])
-		if err != nil {
-			fmt.Println(err)
+		file, data := os.Open(os.Args[0])
+		if data != nil {
+			fmt.Println(data)
 		}
 
 		arr := make([]byte, 14)
