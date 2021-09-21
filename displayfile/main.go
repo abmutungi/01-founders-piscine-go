@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	if len(os.Args) < 1 {
+	if len(os.Args) > 1 {
 		os.Args = os.Args[1:]
 	} else {
 		fmt.Println("File name missing")
