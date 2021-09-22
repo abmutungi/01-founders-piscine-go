@@ -19,7 +19,7 @@ func Rot14(s string) string {
 				char[i] = char[i] + 14
 			}
 		}
-		result += string(char[i])
+		result = result + string(char[i])
 
 	}
 	return result
