@@ -10,3 +10,23 @@ func StrRev(s string) string {
 	}
 	return string(empty) // print reverse
 }
+
+/*
+package main
+
+import (
+	"fmt"
+)
+
+func reverse(s string) (result string) {
+	for _, v := range s {
+		result = string(v) + result
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(reverse("Hello World"))
+}
+
+*/
