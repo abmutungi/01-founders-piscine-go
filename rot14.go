@@ -2,15 +2,27 @@ func Rot14(s string) string {
 
 	char := []rune(s)
 
-	for _, char:= range s {
-		if char >= 65 && char <= 76 || char >= 97 && char <= 108 {
-		result = append(result, char+14)
+	var result string
+
+	for i := 0 ; i < len(char) ; i++ {
+		if char[i] >= 'a' && char[i] <= 'z' {
+			if char[i] >= 'm' {
+				char[i] = char[i] - 12
+			}else {
+				char[i] = char[i] + 14
+			}
+			}
+	} else if char[i] >= 'A' && char[i] <= 'Z' {
+			if char[i] >= 'M' {
+				char[i] = char[i] - 12
+			}else {
+				char[i] = char[i] + 14
+			}
+		}
+		result += string(char[i])
+
 	}
-		if char >= 77 && char <= 90 || char >= 109 && char <= 122 {
-		result = append(result, char-12)
-
-		} else { return char
-
+	return result
 }
-return result
-	}
+
+			
