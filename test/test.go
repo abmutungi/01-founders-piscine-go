@@ -1,8 +1,17 @@
 package main
 
-import "piscine"
+import (
+	"fmt"
+	"piscine"
+)
 
 func main() {
-	a := []int{1, 2, 3, 4, 5, 6}
-	piscine.ForEach(piscine.PrintNbr, a)
+	a1 := []string{"Hello", "how", "are", "you"}
+	a2 := []string{"This", "is", "4", "you"}
+
+	result1 := piscine.Any(piscine.IsNumeric, a1)
+	result2 := piscine.Any(piscine.IsNumeric, a2)
+
+	fmt.Println(result1)
+	fmt.Println(result2)
 }
