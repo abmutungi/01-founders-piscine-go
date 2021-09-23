@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package piscine
 
 func isPowerof2(nb int) bool {
 
@@ -25,7 +21,3 @@ func isPowerof2(nb int) bool {
 		return false
 	}
 }
-func main() {
-	fmt.Println(isPowerof2(512))
-}
-
