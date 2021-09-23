@@ -1,16 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"piscine"
-
-	"github.com/01-edu/z01"
 )
 
 func main() {
-	result := piscine.Rot14("Hello! How are You?")
-
-	for _, r := range result {
-		z01.PrintRune(r)
-	}
-	z01.PrintRune('\n')
+	fmt.Println(piscine.Index("Hello!", "l"))
+	fmt.Println(piscine.Index("Salut!", "alu"))
+	fmt.Println(piscine.Index("Ola!", "hOl"))
 }
